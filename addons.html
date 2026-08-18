@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ViewEC Corp.｜單項服務</title>
+<meta name="description" content="ViewEC 日本電商單項服務，可依需求單獨委託訂單、客服、廣告、活動與數據分析，也可搭配服務方案使用。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="authGate" class="auth-gate" hidden><div class="login-card"><div class="login-brand"><span>V</span><strong>ViewEC Corp.</strong></div><p class="eyebrow">PRIVATE ACCESS</p><h1>登入服務方案頁面</h1><p>請輸入帳號與密碼後瀏覽內容。</p><form id="loginForm"><label>帳號<input id="loginUser" autocomplete="username" required></label><label>密碼<input id="loginPass" type="password" autocomplete="current-password" required></label><button class="cta full" type="submit">登入</button><p id="loginError" class="login-error"></p></form></div></div>
+<div id="siteApp" hidden>
+<header class="header"><div class="container nav"><a class="logo" href="index.html"><span>V</span>ViewEC Corp.</a><button id="menu" aria-label="開啟選單">☰</button><nav id="nav"><a href="index.html#services">服務內容</a><a href="index.html#plans">服務方案</a><a class="active" href="addons.html">單項服務</a><button class="nav-logout" id="logoutBtn" type="button">登出</button></nav></div></header>
+<main>
+<section class="addon-hero"><div class="container"><p class="eyebrow">STANDALONE SERVICES</p><h1>依照需求，選擇需要的單項服務。</h1><p>無須綁定服務方案，可單獨委託；也可搭配既有服務方案自由組合。若方案已包含相同服務，系統將不重複計費。</p></div></section>
+<section class="section addon-section"><div class="container addon-layout"><div><div class="addon-grid">
+<article class="addon-card featured-addon" data-service-card="storeSetup"><div class="addon-top"><span>STORE SETUP</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="storeSetup"> 選擇</label></div><h2>店鋪帳號開立</h2><p>協助完成日本電商平台開店前置規劃、審查溝通至店鋪建置與考核。</p><ul><li>開店申請前置規劃與審查資料整備</li><li>審查期間溝通與進度管理</li><li>店鋪建置與考核</li></ul><div class="old-price addon-old">原價 NT$100,000／次（未稅）</div><div class="addon-price">特價 NT$80,000／次（未稅）</div><p class="included-note" hidden>目前服務方案已包含此項目，無須另外購買。</p></article>
+
+<article class="addon-card" data-service-card="orders"><div class="addon-top"><span>ORDER</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="orders"> 選擇</label></div><h2>訂單處理與出貨服務</h2><p>協助處理訂單資料與出貨安排，包含台灣端收件及日本端物流寄送流程。</p><ul><li>訂單資料整理與出貨資訊確認</li><li>台灣端收件與作業資訊彙整</li><li>日本端物流寄送安排</li></ul><div class="addon-price">NT$12,000／月（未稅）</div><p class="addon-fee-extra">＋物流服務所產生之所有相關費用（運費、倉儲等）</p><p class="included-note" hidden>目前服務方案已包含此項目，無須另外購買。</p></article>
+
+<article class="addon-card" data-service-card="cs"><div class="addon-top"><span>CS</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="cs"> 選擇</label></div><h2>日文客服對應與評價管理</h2><p>服務範圍限樂天站內信、商品問答及評價相關對應。</p><ul><li>樂天站內信</li><li>商品問答</li><li>評價回覆與管理</li></ul><div class="addon-price">NT$15,000／月（未稅）</div><p class="included-note" hidden>目前服務方案已包含此項目，無須另外購買。</p></article>
+
+<article class="addon-card addon-wide" data-service-card="adManagement"><div class="addon-top"><span>ADS & CREATIVE</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="adManagement"> 選擇廣告投放</label></div><h2>廣告投放與素材製作</h2><p>廣告投放與圖片素材可分別單獨購買。RPP 等廣告依您提供的預算進行投放；TDA、聯盟行銷或促銷活動若需圖片素材，可依下列項目加購。</p><div class="ad-fee-box"><div><small>廣告投放服務手續費</small><strong>廣告實際投放金額 × 10%</strong><span>（未稅）</span></div><label>預估廣告投放金額<div class="revenue-input"><span>NT$</span><input id="adBudget" type="number" min="0" step="1000" placeholder="輸入廣告預算"></div></label></div><p class="included-note" hidden>目前服務方案已包含廣告投放服務；若需額外製作素材，仍可於下方單獨加購。</p>
+<div class="material-list"><h3>素材製作費</h3>
+<div class="material-row"><div><strong>商品主圖</strong><small>1 Listing・1張｜NT$1,300（未稅）</small></div><div class="qty-control"><button type="button" data-material="main" data-qty-action="minus">−</button><input id="material-main" data-material-input="main" type="number" min="0" value="0"><button type="button" data-material="main" data-qty-action="plus">＋</button></div></div>
+<div class="material-row"><div><strong>商品主圖＋商品介紹圖</strong><small>1 Listing・共9張｜NT$10,000（未稅）</small></div><div class="qty-control"><button type="button" data-material="set" data-qty-action="minus">−</button><input id="material-set" data-material-input="set" type="number" min="0" value="0"><button type="button" data-material="set" data-qty-action="plus">＋</button></div></div>
+<div class="material-row"><div><strong>Resize 尺寸調整</strong><small>1張｜NT$1,000（未稅）</small></div><div class="qty-control"><button type="button" data-material="resize" data-qty-action="minus">−</button><input id="material-resize" data-material-input="resize" type="number" min="0" value="0"><button type="button" data-material="resize" data-qty-action="plus">＋</button></div></div>
+<div class="material-row"><div><strong>品牌圖／促銷活動 Banner</strong><small>1張｜NT$1,000（未稅）</small></div><div class="qty-control"><button type="button" data-material="banner" data-qty-action="minus">−</button><input id="material-banner" data-material-input="banner" type="number" min="0" value="0"><button type="button" data-material="banner" data-qty-action="plus">＋</button></div></div>
+</div></article>
+
+<article class="addon-card" data-service-card="campaign"><div class="addon-top"><span>CAMPAIGN</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="campaign"> 選擇</label></div><h2>行銷活動設定</h2><p>協助處理樂天市場常見活動申請與後台設定。</p><ul><li>Super SALE 報名</li><li>點數變倍／Coupon 設定</li><li>Super DEAL 報名等</li></ul><div class="addon-price">依需求報價</div><p class="included-note" hidden>目前服務方案已包含此項目，無須另外購買。</p></article>
+
+<article class="addon-card" data-service-card="data"><div class="addon-top"><span>DATA</span><label class="switch-line"><input type="checkbox" class="service-check" data-service="data"> 選擇</label></div><h2>數據分析與報告製作</h2><p>依樂天後台可取得之營運數據進行整理與分析，可依需求整理為指定報告形式。</p><ul><li>銷售／流量／轉換率</li><li>廣告 ROAS／TACoS</li><li>活動前後成效比較</li></ul><div class="addon-price">NT$1,000／則（未稅）</div><p class="addon-fee-extra">※ 營運數據報告每月限提供一次。</p><p class="included-note" hidden>目前服務方案已包含月度／後台數據報告，無須另外購買。</p></article>
+</div></div>
+
+<aside class="estimate-card"><p class="eyebrow">ESTIMATE</p><h2>費用試算</h2>
+<div class="estimate-group"><small>服務方案（選填）</small><div id="estimatePlan" class="estimate-line"><span>未選擇，可只購買單項服務</span><strong></strong></div><a href="index.html#plans" class="text-link">選擇／變更服務方案</a></div>
+<div class="estimate-group"><small>預估每月營收</small><div class="revenue-input"><span>NT$</span><input id="estimatedRevenue" type="number" min="0" step="1000" placeholder="輸入預估營收"></div><p class="estimate-hint">僅在代銷售（25%）或客製代營運（3%）方案時計算營收服務費。</p></div>
+<div class="estimate-group"><small>單項服務</small><div id="estimateServices"><p class="muted">尚未選擇單項服務</p></div></div>
+<div class="estimate-group" id="revenueFeeGroup"><small>營收服務費</small><div id="revenueFeeLine" class="estimate-line"><span>未選擇適用方案</span><strong></strong></div></div>
+<div class="estimate-group"><small>其他預估支出</small><div id="externalCosts"><p class="muted">物流費、廣告實際投放金額等依實際發生另計。</p></div></div>
+<div class="estimate-total"><div><span>一次性服務費</span><strong id="oneTimeTotal">NT$ 0</strong></div><div><span>每月服務費</span><strong id="monthlyTotal">NT$ 0／月</strong></div></div>
+<p id="estimateHint" class="estimate-hint">以上皆為未稅金額。另行報價或實報實銷項目不會納入數字加總。</p><a id="quoteMail" class="cta full" href="mailto:contact@example.com">洽詢此組合</a><button id="clearSelection" class="ghost full clear-btn" type="button">清除所有選擇</button></aside>
+</div></section></main><script src="script.js"></script></div></body></html>
