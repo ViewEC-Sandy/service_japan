@@ -1,6 +1,6 @@
 // Firebase Web App configuration for ViewEC Corp.
 // This config identifies the Firebase project; authentication is enforced by Firebase Authentication.
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCarL_kTYj5S_3Rs4Om6fy4oXp3CoKskMQ",
   authDomain: "japan-sevice.firebaseapp.com",
   projectId: "japan-sevice",
