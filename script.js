@@ -1,11 +1,4 @@
-/* =============================================================
-   ViewEC Corp. 網站設定
-   重要：GitHub Pages / Firebase Hosting 都是靜態託管。
-   下方帳密屬於前端存取門檻，無法取代 Firebase Authentication
-   或其他具後端驗證能力的登入方式。
-   ============================================================= */
-const AUTH={username:'viewec',password:'2026viewec'};
-
+/* ViewEC Corp. 方案與費用試算邏輯 */
 const PRICE_CONFIG={
   plans:{
     starter:{name:'基礎導入方案',price:null,type:'oneTime',revenueRate:0},
@@ -63,14 +56,7 @@ function removeIncludedServices(state){
   return removed;
 }
 
-function initAuth(){
-  const gate=document.getElementById('authGate'),app=document.getElementById('siteApp');
-  if(!gate||!app)return;
-  const show=()=>{const ok=sessionStorage.getItem('viewecAuth')==='1';gate.hidden=ok;app.hidden=!ok;if(ok)initSite();};
-  document.getElementById('loginForm')?.addEventListener('submit',e=>{e.preventDefault();const u=document.getElementById('loginUser').value.trim(),p=document.getElementById('loginPass').value;if(u===AUTH.username&&p===AUTH.password){sessionStorage.setItem('viewecAuth','1');document.getElementById('loginError').textContent='';show()}else document.getElementById('loginError').textContent='帳號或密碼不正確。'});
-  document.getElementById('logoutBtn')?.addEventListener('click',()=>{sessionStorage.removeItem('viewecAuth');location.reload()});
-  show();
-}
+
 
 let initialized=false;
 function initSite(){
@@ -174,4 +160,4 @@ function renderEstimate(){
   }
 }
 
-document.addEventListener('DOMContentLoaded',initAuth);
+window.initViewECSite = initSite;

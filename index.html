@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="authGate" class="auth-gate" hidden><div class="login-card"><div class="login-brand"><span>V</span><strong>ViewEC Corp.</strong></div><p class="eyebrow">PRIVATE ACCESS</p><h1>登入服務方案頁面</h1><p>請輸入帳號與密碼後瀏覽內容。</p><form id="loginForm"><label>帳號<input id="loginUser" autocomplete="username" required></label><label>密碼<input id="loginPass" type="password" autocomplete="current-password" required></label><button class="cta full" type="submit">登入</button><p id="loginError" class="login-error" aria-live="polite"></p></form></div></div>
+<div id="authGate" class="auth-gate" hidden><div class="login-card"><div class="login-brand"><span>V</span><strong>ViewEC Corp.</strong></div><p class="eyebrow">PRIVATE ACCESS</p><h1>登入服務方案頁面</h1><p>請輸入已授權的 Email 與密碼後瀏覽內容。</p><form id="loginForm"><label>Email<input id="loginUser" type="email" autocomplete="username" placeholder="name@example.com" required></label><label>密碼<input id="loginPass" type="password" autocomplete="current-password" required></label><button class="cta full" type="submit">登入</button><p id="loginError" class="login-error" aria-live="polite"></p></form></div></div>
 <div id="siteApp" hidden>
 <header class="header"><div class="container nav"><a class="logo" href="#top"><span>V</span>ViewEC Corp.</a><button id="menu" aria-label="開啟選單">☰</button><nav id="nav"><a href="#services">服務內容</a><a href="#audience">適用對象</a><a href="#plans">服務方案</a><a href="#compare">方案比較</a><a href="addons.html">單項服務</a><button class="nav-logout" id="logoutBtn" type="button">登出</button></nav></div></header>
 <main id="top">
@@ -80,4 +80,4 @@
 <p class="note">※ 實際服務內容、執行範圍與費用，將依品牌現況、商品類型及目標市場另行確認。上述價格皆為未稅價格。</p></div></section>
 </main>
 <div class="floating-summary" id="floatingSummary" hidden><div><small>已選擇方案</small><strong id="floatingPlan">—</strong></div><a class="cta small" href="addons.html">繼續選擇單項服務</a></div>
-<script src="script.js"></script></div></body></html>
+<script src="script.js"></script><script type="module" src="auth.js"></script></div></body></html>
