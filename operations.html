@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ViewEC Corp.｜營運服務費試算</title>
+  <meta name="description" content="ViewEC 三店鋪訂單、採購、出貨及文字客服服務費試算。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="operations-style.css">
+</head>
+<body>
+  <div id="authGate" class="auth-gate" hidden>
+    <div class="login-card">
+      <div class="login-brand"><span>V</span><strong>ViewEC Corp.</strong></div>
+      <p class="eyebrow">PRIVATE ACCESS</p>
+      <h1>登入營運費試算頁面</h1>
+      <p>請輸入已授權的 Email 與密碼後瀏覽內容。</p>
+      <form id="loginForm">
+        <label>Email<input id="loginUser" type="email" autocomplete="username" placeholder="name@example.com" required></label>
+        <label>密碼<input id="loginPass" type="password" autocomplete="current-password" required></label>
+        <button class="primary full" type="submit">登入</button>
+        <p id="loginError" class="login-error"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="siteApp" hidden>
+    <header class="header">
+      <div class="container nav">
+        <a class="logo" href="https://japan-sevice.web.app/index.html"><span>V</span>ViewEC Corp.</a>
+        <button id="menu" aria-label="開啟選單">☰</button>
+        <nav id="nav">
+          <a href="https://japan-sevice.web.app/index.html">服務方案</a>
+          <a href="https://japan-sevice.web.app/addons.html">單項服務</a>
+          <a class="active" href="operations.html">營運費試算</a>
+          <button class="nav-logout" id="logoutBtn" type="button">登出</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">OPERATION FEE CALCULATOR</p>
+          <h1>依照實際業務量，<br>試算每月營運服務費。</h1>
+          <p>適用於三個店鋪以內的訂單處理、商品採購、出貨、文字客服及每月對帳請款。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container workspace">
+          <div class="main-column">
+            <article class="plan-card">
+              <div class="plan-heading">
+                <div><p class="eyebrow">BASE PLAN</p><h2>基本營運方案</h2></div>
+                <div class="base-price">NT$60,000<small>／月（未稅）</small></div>
+              </div>
+              <div class="allowances">
+                <div><span>店鋪數</span><strong>3 店以內</strong></div>
+                <div><span>訂單額度</span><strong>300 單／月</strong></div>
+                <div><span>客服額度</span><strong>150 件／月</strong></div>
+                <div><span>對帳請款</span><strong>各店每月 1 次</strong></div>
+              </div>
+              <ul class="check-list">
+                <li>訂單資料確認與處理</li><li>商品採購與進度追蹤</li><li>出貨安排與物流資訊整理</li><li>一般文字客服與評價對應</li><li>每月對帳及請款資料整理</li><li>日常營運溝通與異常回報</li>
+              </ul>
+            </article>
+
+            <article class="calculator-card">
+              <div class="section-title"><div><p class="eyebrow">MONTHLY USAGE</p><h2>輸入本月處理量</h2></div><button id="resetBtn" class="ghost" type="button">重設</button></div>
+              <div class="input-grid">
+                <label>本月訂單數<div class="number-field"><input id="orders" type="number" min="0" step="1" value="0"><span>單</span></div><small>訂單處理、採購與出貨合併計算</small></label>
+                <label>本月客服案件數<div class="number-field"><input id="cases" type="number" min="0" step="1" value="0"><span>件</span></div><small>依客服案件定義計算</small></label>
+              </div>
+              <div class="rate-grid">
+                <div><span>超額訂單費</span><strong>NT$120／單</strong><small>超過每月 300 單的部分</small></div>
+                <div><span>超額客服費</span><strong>NT$120／件</strong><small>超過每月 150 件的部分</small></div>
+              </div>
+            </article>
+
+            <article class="definition-card">
+              <p class="eyebrow">COUNTING RULES</p><h2>計價與案件定義</h2>
+              <div class="definition-grid">
+                <div><b>一筆訂單</b><p>同一訂單的訂單確認、採購及一般出貨處理，合併計為 1 單。</p></div>
+                <div><b>一件客服</b><p>同一顧客、同一訂單、同一問題的連續往來，合併計為 1 件。</p></div>
+                <div><b>另行報價</b><p>大量客訴、退換貨爭議、跨平台複雜案件、特殊包裝或非例行作業。</p></div>
+                <div><b>實報實銷</b><p>商品貨款、國內外運費、倉儲費、包材費、稅金及其他第三方費用。</p></div>
+              </div>
+            </article>
+          </div>
+
+          <aside class="estimate-card">
+            <p class="eyebrow">ESTIMATE</p><h2>本月費用試算</h2>
+            <div class="estimate-row"><span>基本月費<small>含 300 單＋150 件客服</small></span><strong>NT$60,000</strong></div>
+            <div class="estimate-row"><span>超額訂單<small id="orderDetail">0 單 × NT$120</small></span><strong id="orderFee">NT$0</strong></div>
+            <div class="estimate-row"><span>超額客服<small id="caseDetail">0 件 × NT$120</small></span><strong id="caseFee">NT$0</strong></div>
+            <div class="total"><span>預估每月服務費</span><strong id="total">NT$60,000</strong><small>未稅</small></div>
+            <div class="status" id="status">目前處理量在基本額度內</div>
+            <button id="copyBtn" class="primary full" type="button">複製試算結果</button>
+            <p class="hint">此試算僅供初步估價。實際費用與服務範圍，以雙方確認之報價單或合約為準。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">REFERENCE TIERS</p><h2>訂單量級距參考</h2><p>若未來業務量穩定，可依實際數據改採固定級距方案。</p></div>
+          <div class="table-wrap"><table><thead><tr><th>三店合計月訂單量</th><th>參考月費</th><th>客服參考額度</th></tr></thead><tbody><tr><td>0～300 單</td><td>NT$60,000</td><td>150 件</td></tr><tr><td>301～600 單</td><td>NT$90,000</td><td>300 件</td></tr><tr><td>601～1,000 單</td><td>NT$120,000</td><td>500 件</td></tr><tr><td>1,001～1,500 單</td><td>NT$150,000</td><td>750 件</td></tr><tr><td>1,501 單以上</td><td>另行報價</td><td>依實際需求</td></tr></tbody></table></div>
+          <p class="table-note">※ 級距表僅供方案規劃參考；目前正式試算採「基本月費＋超額訂單費＋超額客服費」。</p>
+        </div>
+      </section>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="operations-script.js"></script>
+    <script type="module" src="auth.js"></script>
+  </div>
+</body>
+</html>
