@@ -4,11 +4,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "README.md",
-      "DEPLOYMENT.md"
-    ],
-    "cleanUrls": false,
-    "trailingSlash": false
+      "**/node_modules/**"
+    ]
   }
 }
